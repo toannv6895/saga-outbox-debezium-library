@@ -31,4 +31,4 @@ jobs:
     - name: Deploy to GitHub Packages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: mvn --batch-mode deploy
+      run: mvn deploy -DaltDeploymentRepository=github::default::https://maven.pkg.github.com/toannv6895/saga-outbox-debezium-library
