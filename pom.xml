@@ -29,14 +29,14 @@
     <distributionManagement>
         <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/USERNAME/REPOSITORY</url>
+            <url>https://maven.pkg.github.com/toannv6895/saga-outbox-debezium-library</url>
         </repository>
     </distributionManagement>
 
     <repositories>
         <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/USERNAME/REPOSITORY</url>
+            <url>https://maven.pkg.github.com/toannv6895/saga-outbox-debezium-library</url>
         </repository>
     </repositories>
     <properties>
