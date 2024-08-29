@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import com.toannguyen.outbox.framework.mapper.OutboxMapper;
 
 @Configuration
-@EntityScan("com.toannguyen.outbox.framework")
+@EntityScan("com.toannguyen")
 public class OutboxConfiguration {
     @Bean
     OutboxEventHandler outboxEventHandler(EntityManager entityManager, OutboxMapper outboxMapper) {
