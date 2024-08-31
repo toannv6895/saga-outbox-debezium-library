@@ -6,3 +6,9 @@ CREATE TABLE IF NOT EXISTS outboxevent (
     type           VARCHAR(100) NOT NULL,
     payload        JSON        NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS ConsumedMessage
+(
+    event_id  BINARY(16) NOT NULL PRIMARY KEY DEFAULT (UUID_TO_BIN(UUID())),
+    time_of_receiving TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
