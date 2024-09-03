@@ -2,6 +2,7 @@ package com.toannguyen.outbox.framework.internal;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,7 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "consumedmessage")
 public class ConsumedMessage {
     @Id
     private UUID eventId;

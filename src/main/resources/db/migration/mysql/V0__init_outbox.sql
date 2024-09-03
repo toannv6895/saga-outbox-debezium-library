@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS outboxevent (
     payload        JSON        NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS ConsumedMessage
+CREATE TABLE IF NOT EXISTS consumedmessage
 (
     event_id  BINARY(16) NOT NULL PRIMARY KEY DEFAULT (UUID_TO_BIN(UUID())),
     time_of_receiving TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
