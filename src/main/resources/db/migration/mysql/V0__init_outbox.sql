@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS outboxevent (
+CREATE TABLE IF NOT EXISTS outbox_event (
     id             BINARY(16) NOT NULL PRIMARY KEY DEFAULT (UUID_TO_BIN(UUID())),
     timestamp      TIMESTAMP  NOT NULL DEFAULT CURRENT_TIMESTAMP,
     aggregate_type VARCHAR(100) NOT NULL,
@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS outboxevent (
     payload        JSON        NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS consumedmessage
+CREATE TABLE IF NOT EXISTS consumed_message
 (
     event_id  BINARY(16) NOT NULL PRIMARY KEY DEFAULT (UUID_TO_BIN(UUID())),
     time_of_receiving TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP

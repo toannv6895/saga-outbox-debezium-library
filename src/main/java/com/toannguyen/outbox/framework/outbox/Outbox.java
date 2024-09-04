@@ -12,7 +12,7 @@ import java.time.Instant;
 import java.util.UUID;
 
 @Entity
-@Table(name = "outboxevent")
+@Table(name = "outbox_event")
 @Getter
 @Setter
 public class Outbox implements Serializable {

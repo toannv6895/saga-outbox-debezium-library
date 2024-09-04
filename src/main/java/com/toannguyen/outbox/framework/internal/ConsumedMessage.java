@@ -16,7 +16,7 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "consumedmessage")
+@Table(name = "consumed_message")
 public class ConsumedMessage {
     @Id
     private UUID eventId;
