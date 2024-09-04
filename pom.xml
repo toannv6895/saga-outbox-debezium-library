@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.toannguyen</groupId>
     <artifactId>saga-outbox-debezium-library</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>Saga-Outbox</name>
     <description>Saga Outbox library for Debezium</description>
     <url/>
