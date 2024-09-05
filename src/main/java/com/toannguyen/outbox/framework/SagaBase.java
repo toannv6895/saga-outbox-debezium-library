@@ -24,12 +24,12 @@ public abstract class SagaBase {
 
     private final SagaState state;
 
-    @PersistenceContext
-    private EntityManager entityManager;
+    private final EntityManager entityManager;
 
-    protected SagaBase(ApplicationEventPublisher event, SagaState state) {
+    protected SagaBase(ApplicationEventPublisher event, SagaState state, EntityManager entityManager) {
         this.event = event;
         this.state = state;
+        this.entityManager = entityManager;
     }
 
     public final UUID getId() {

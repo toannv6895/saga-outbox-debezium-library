@@ -31,7 +31,7 @@ public class SagaManager {
             entityManager.persist(state);
 
 
-            S saga = sagaType.getConstructor(ApplicationEventPublisher.class, SagaState.class).newInstance(event, state);
+            S saga = sagaType.getConstructor(ApplicationEventPublisher.class, SagaState.class, EntityManager.class).newInstance(event, state, entityManager);
             saga.advance();
             return saga;
         }
@@ -48,7 +48,7 @@ public class SagaManager {
         }
 
         try {
-            return sagaType.getConstructor(ApplicationEventPublisher.class, SagaState.class).newInstance(event, state);
+            return sagaType.getConstructor(ApplicationEventPublisher.class, SagaState.class, EntityManager.class).newInstance(event, state, entityManager);
         }
         catch (Exception e) {
             throw new RuntimeException(e);
