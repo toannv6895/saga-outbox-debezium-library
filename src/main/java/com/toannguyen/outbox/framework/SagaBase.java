@@ -24,7 +24,7 @@ public abstract class SagaBase {
 
     private final SagaState state;
 
-    private final EntityManager entityManager;
+    protected final EntityManager entityManager;
 
     protected SagaBase(ApplicationEventPublisher event, SagaState state, EntityManager entityManager) {
         this.event = event;
